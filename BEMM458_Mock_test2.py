@@ -158,6 +158,16 @@ prices = {'A': 50, 'B': 75, 'C': 'unknown', 'D': 30}
 # Write a function to calculate the total price of all items, handling any non-numeric values by skipping them.
 # Include error handling in your function and explain where and why it’s needed.
 
+def calculate_total_price(prices):
+    total_price=0
+    for price in prices.items():
+        try:
+            total_price += float(price[1])
+        except ValueError:
+            print(f"Skipping non-numeric value: {price[1]}")
+    return total_price
+print("Total price:",calculate_total_price(prices))
+
 #######################################################################################################################################################
 
 # Question 7 - Plotting and Visualization
@@ -167,6 +177,12 @@ prices = {'A': 50, 'B': 75, 'C': 'unknown', 'D': 30}
 
 import matplotlib.pyplot as plt
 import random
+random_numbers = [random.randint(1, 500) for i in range(50)]
+plt.hist(random_numbers, bins=10, color='skyblue', edgecolor='black')
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.title('Distribution of Random Numbers')
+plt.show()
 
 #######################################################################################################################################################
 
@@ -176,12 +192,18 @@ quantities = [5, 12, 9, 15, 7, 10]
 
 # Use a list comprehension to create a new list that doubles each quantity that is 10 or more.
 # Print the original and the new lists.
+print("Original List:", quantities)
+new_list = [quantity * 2 for quantity in quantities if quantity >= 10]
+print("New List:", new_list)
 
 #######################################################################################################################################################
 
 # Question 9 - Dictionary Manipulation
 # Using the dictionary below, filter out the products with a rating of less than 4 and create a new dictionary with the remaining products.
 ratings = {'product_A': 4, 'product_B': 5, 'product_C': 3, 'product_D': 2, 'product_E': 5}
+
+filtered_products = {product: rating for product, rating in ratings.items() if rating >= 4}
+print("Filtered Products:", filtered_products)
 
 #######################################################################################################################################################
 
@@ -192,7 +214,7 @@ total = 0
 for i in values:
     total = total + i
 average = total / len(values)
-print("The average is" + average)
+print("The average is",average)
 
 # Identify and correct the errors in the code.
 # Comment on each error and explain your fixes.
