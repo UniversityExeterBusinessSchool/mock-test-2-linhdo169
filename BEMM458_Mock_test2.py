@@ -77,6 +77,25 @@ print("Positions of keywords:",position)
 # 3. Net Promoter Score (NPS): Calculate as (Promoters - Detractors) / Total Respondents * 100.
 # 4. Return on Investment (ROI): Calculate as (Net Gain from Investment / Investment Cost) * 100.
 
+def net_profit_margin(net_profit, revenue):
+    return((net_profit/revenue)*100)
+print("Net Profit Margin:",net_profit_margin(9994848,939399))
+#Net Profit Margin 1063.9619586565454
+
+def customer_acquisition_cost(total_marketing_cost,new_customer_acquired):
+    return(total_marketing_cost/new_customer_acquired)
+print("Customer Acquisition Cost:",customer_acquisition_cost(93903902930,39029))
+#Customer Acquisition Cost: 2406003.303441031
+
+def net_promoter_score(promoters, detractors, total_respondents):
+    return((promoters - detractors)/total_respondents*100)
+print("Net Promoter Score:",net_promoter_score(4455,5555,3333))
+#Net Promoter Score: -33.003300330033
+
+def return_on_investment(net_gain_from_investment,investment_cost):
+    return((net_gain_from_investment/investment_cost)*100)
+print("Return on Investment:",return_on_investment(348938,49384))
+#Return on Investment: 706.5810788919488
 
 #######################################################################################################################################################
 
@@ -87,6 +106,16 @@ import pandas as pd
 
 sales_data = {'Month': ['Jan', 'Feb', 'Mar', 'Apr', 'May'], 'Sales': [200, 220, 210, 240, 250]}
 
+df= pd.DataFrame(sales_data)
+df['Cumulative Sales']= df['Sales'].cumsum()
+print(df)
+
+# Month  Sales  Cumulative Sales
+#0   Jan    200               200
+#1   Feb    220               420
+#2   Mar    210               630
+#3   Apr    240               870
+#4   May    250              1120
 #######################################################################################################################################################
 
 # Question 5 - Linear Regression for Forecasting
