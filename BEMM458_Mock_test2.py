@@ -129,6 +129,26 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 
+# Data for linear regression
+prices = np.array([15, 18, 20, 22, 25, 27, 30]).reshape(-1, 1)
+demand = np.array([200, 180, 170, 160, 150, 140, 130])
+
+# Create and train model
+model = LinearRegression()
+model.fit(prices, demand)
+
+# Predict demand at price 26
+predicted_demand = model.predict(np.array([[26]]))
+print(f"Predicted demand at price £26: {predicted_demand[0]}")
+
+# Plotting the data points and regression line
+plt.scatter(prices, demand, color='blue')
+plt.plot(prices, model.predict(prices), color='red')
+plt.xlabel("Price (£)")
+plt.ylabel("Demand (Units)")
+plt.title("Price vs Demand")
+plt.show()
+
 #######################################################################################################################################################
 
 # Question 6 - Error Handling
