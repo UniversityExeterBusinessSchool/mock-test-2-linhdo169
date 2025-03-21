@@ -1,10 +1,10 @@
 #######################################################################################################################################################
 # 
-# Name: Do Thi Yen Linh
-# SID: 0909090909
-# Exam Date: Mar 29
-# Module: Programmming
-# Github link for this assignment: UniversityExeterBusinessSchool/mock-test-2-mock-test-2-Mock2:main
+# Name:
+# SID:
+# Exam Date:
+# Module:
+# Github link for this assignment:  
 #
 #######################################################################################################################################################
 # Instruction 1. Read each question carefully and complete the scripts as instructed.
@@ -24,26 +24,7 @@ weekly_sales = [120, 85, 100, 90, 110, 95, 130]
 
 # Write a for loop that iterates through the list and prints whether each week's sales were above or below the average sales for the period.
 # Calculate and print the average sales.
-average_sales= sum(weekly_sales)/len(weekly_sales)
 
-for sales in weekly_sales:
-    if sales > average_sales:
-        print(f"Week's sales of {sales} is above average. ")
-    elif sales < average_sales:
-        print(f"Week's sales of {sales} is below average.")
-    else:
-        print(f"Week's sales of {sales} is equal to average ")
-
-print(f"Average sales is {average_sales}.")
-
-#Week's sales of 120 is above average. 
-#Week's sales of 85 is below average.
-#Week's sales of 100 is below average.
-#Week's sales of 90 is below average.
-#Week's sales of 110 is above average. 
-#Week's sales of 95 is below average.
-#Week's sales of 130 is above average. 
-#Average sales is 104.28571428571429.
 #######################################################################################################################################################
 
 # Question 2 - String Manipulation
@@ -52,21 +33,7 @@ customer_feedback = """The product was good but could be improved. I especially 
 
 # Find the first and last occurrence of the words 'good' and 'improved' in the feedback using string methods.
 # Store each position in a list as a tuple (start, end) for both words and print the list.
-first_good= customer_feedback.find('good')
-last_good= customer_feedback.rfind('good')
 
-first_improved=customer_feedback.find('improved')
-last_imrpoved=customer_feedback.rfind('improved')
-
-position=[
-    (first_good,first_good+len('good')),
-    (last_good, last_good+len('good')),
-    (first_improved, first_improved+len('improved')),
-    (last_imrpoved, last_imrpoved+len('improved'))
-]
-print("Positions of keywords:",position)
-
-#Positions of keywords: [(16, 20), (16, 20), (34, 42), (34, 42)]
 #######################################################################################################################################################
 
 # Question 3 - Functions for Business Metrics
@@ -76,7 +43,6 @@ print("Positions of keywords:",position)
 # 2. Customer Acquisition Cost (CAC): Calculate as (Total Marketing Cost / New Customers Acquired).
 # 3. Net Promoter Score (NPS): Calculate as (Promoters - Detractors) / Total Respondents * 100.
 # 4. Return on Investment (ROI): Calculate as (Net Gain from Investment / Investment Cost) * 100.
-
 
 #######################################################################################################################################################
 
