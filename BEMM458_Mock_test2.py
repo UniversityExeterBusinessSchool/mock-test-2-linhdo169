@@ -125,6 +125,10 @@ print(df)
 # Price (£): 15, 18, 20, 22, 25, 27, 30
 # Demand (Units): 200, 180, 170, 160, 150, 140, 130
 
+import numpy as np
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
+
 #######################################################################################################################################################
 
 # Question 6 - Error Handling
